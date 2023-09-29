@@ -15,9 +15,11 @@ type ComponentProps = {
 export default function UserCard({ onClick, user }: ComponentProps) {
     return (
         <div className={styles['user-card']} onClick={() => onClick(user)}>
-            <p><strong>{user.name}</strong></p>
-            <p>{user.email}</p>
-            <p>{user.phone}</p>
+            <p>
+                <strong>{user.name}</strong><br />
+                {user.email}<br />
+                {user.phone}
+            </p>
         </div>
     )
 }

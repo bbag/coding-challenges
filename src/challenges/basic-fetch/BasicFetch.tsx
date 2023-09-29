@@ -46,12 +46,14 @@ export default function BasicFetch() {
             </div>
             <div>
                 <h2>Active user</h2>
-                <p>Name: {activeUser?.name || 'n/a'}</p>
-                <p>Email: {activeUser?.email || 'n/a'}</p>
-                <p>Phone: {activeUser?.phone || 'n/a'}</p>
+                <p>
+                    <strong>Name:</strong> {activeUser?.name || 'n/a'}<br />
+                    <strong>Email:</strong> {activeUser?.email || 'n/a'}<br />
+                    <strong>Phone:</strong> {activeUser?.phone || 'n/a'}
+                </p>
             </div>
-            <div>
-                <h2>Users:</h2>
+            <h2>Users:</h2>
+            <div style={{ display: 'grid', gap: '2rem', gridTemplateColumns: 'repeat(3, 1fr)' }}>
                 {users.map(user => (
                     <UserCard key={user.id} user={user} onClick={handleClick} />
                 ))}

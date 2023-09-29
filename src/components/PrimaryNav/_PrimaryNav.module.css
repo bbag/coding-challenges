@@ -1,0 +1,23 @@
+.primary-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    border-radius: 0.5rem;
+    color: #141516;
+    display: flex;
+    padding: 0.625rem 1rem;
+    text-decoration: none;
+    transition: background-color 150ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    background: #F2F4F6;
+}
+
+.nav-link.nav-link--active {
+    background: #EAECEF;
+}
