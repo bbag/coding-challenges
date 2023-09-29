@@ -1,0 +1,15 @@
+.top-nav {
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    height: 4rem;
+    justify-content: space-between;
+}
+
+.top-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+}
