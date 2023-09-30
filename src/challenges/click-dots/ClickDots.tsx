@@ -7,7 +7,7 @@ export default function ClickDots() {
                 <li>From: <a href="https://www.youtube.com/watch?v=D36HU7LpTCk" target="_blank">www.youtube.com/watch?v=D36HU7LpTCk</a></li>
             </ol>
             <hr />
-            {/* Add results here */}
+            {/* Add solution here */}
         </>
     )
 }

@@ -8,7 +8,7 @@ export default function TicTacToe() {
                 <li>Keep track of how many times each player has won (a leaderboard).</li>
             </ol>
             <hr />
-            {/* Add results here */}
+            {/* Add solution here */}
         </>
     )
 }

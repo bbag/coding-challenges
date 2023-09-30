@@ -8,7 +8,7 @@ export default function Autocomplete() {
                 <li>Build an autocomplete form, where a list of matching options appears below an input as a user types in that input.</li>
             </ol>
             <hr />
-            {/* Add results here */}
+            {/* Add solution here */}
         </>
     )
 }

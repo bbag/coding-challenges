@@ -14,11 +14,10 @@ export default function BasicFetch() {
 
     async function handleFetchUsers() {
         try {
-            console.log('fetching users...')
             const response = await fetch('https://jsonplaceholder.typicode.com/users')
             const data = await response.json() as UserData[]
-            setUsers(data)
-            console.log('done!', data)
+            const sortedData = data.sort((a, b) => a.name > b.name ? 1 : -1)
+            setUsers(sortedData)
         }
 
         catch(error) {
@@ -39,6 +38,7 @@ export default function BasicFetch() {
                 <li>The API endpoint is https://jsonplaceholder.typicode.com/users</li>
                 <li>Display this data in a list of user "cards" with each user's name, email address, and phone number.</li>
                 <li>When a user card is clicked, display that user's info at the top of the app as the "active user".</li>
+                <li><strong>Bonus:</strong> sort the users alphabetically by name.</li>
             </ol>
             <hr />
             <div>

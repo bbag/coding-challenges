@@ -7,7 +7,7 @@ export default function CheckoutQueue() {
                 <li>From: <a href="https://www.youtube.com/watch?v=B9fmr1TpKHE" target="_blank">www.youtube.com/watch?v=B9fmr1TpKHE</a></li>
             </ol>
             <hr />
-            {/* Add results here */}
+            {/* Add solution here */}
         </>
     )
 }

@@ -36,8 +36,15 @@ li {
 
 pre,
 code {
+  background: #EAECEF;
+  color: #2B2D31;
   font-family: monospace, monospace;
   font-size: 1em;
+}
+
+code {
+  border-radius: 0.25rem;
+  padding: 0.125em 0.25em;
 }
 
 pre {
@@ -53,6 +60,10 @@ img {
 
 svg:not(:root) {
   overflow: hidden;
+}
+
+hr {
+  margin: 2rem 0;
 }
 
 button,

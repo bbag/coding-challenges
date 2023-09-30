@@ -29,7 +29,11 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <h1>Coding Challenges</h1>,
+                element: <>
+                    <h1>Coding Challenges Playground</h1>
+                    <p>This is just a fun little playground to test out various React coding challenges from across the web.</p>
+                    <p>Nothing too serious, just a sandbox to brush up some skills in!</p>
+                </>,
             },
             {
                 path: '/autocomplete',

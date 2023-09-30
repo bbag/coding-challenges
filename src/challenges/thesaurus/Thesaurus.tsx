@@ -7,7 +7,7 @@ export default function Thesaurus() {
                 <li>From: <a href="https://www.youtube.com/watch?v=-Rtlnsgbc0k" target="_blank">www.youtube.com/watch?v=-Rtlnsgbc0k</a></li>
             </ol>
             <hr />
-            {/* Add results here */}
+            {/* Add solution here */}
         </>
     )
 }

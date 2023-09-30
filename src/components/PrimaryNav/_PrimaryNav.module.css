@@ -21,3 +21,23 @@
 .nav-link.nav-link--active {
     background: #EAECEF;
 }
+
+.line-icon {
+    color: #C6C8D1;
+    fill: currentColor;
+    height: 1.5rem;
+    margin-right: 0.75rem;
+    stroke-width: 0;
+    width: 1.5rem;
+}
+
+.line-icon--is-done {
+    color: #13B155;
+}
+
+.line-icon--home {
+    color: #5a5c63;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}

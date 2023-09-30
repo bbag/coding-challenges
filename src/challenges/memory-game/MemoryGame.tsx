@@ -7,7 +7,7 @@ export default function MemoryGame() {
                 <li>From: <a href="https://www.youtube.com/watch?v=GUTp5hCz-9o" target="_blank">www.youtube.com/watch?v=GUTp5hCz-9o</a></li>
             </ol>
             <hr />
-            {/* Add results here */}
+            {/* Add solution here */}
         </>
     )
 }
