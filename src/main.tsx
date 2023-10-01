@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -12,6 +11,7 @@ import BasicFetch from './challenges/basic-fetch/BasicFetch.tsx'
 import BreakingBad from './challenges/breaking-bad/BreakingBad.tsx'
 import CheckoutQueue from './challenges/checkout-queue/CheckoutQueue.tsx'
 import ClickDots from './challenges/click-dots/ClickDots.tsx'
+import ConnectFour from './challenges/connect-four/ConnectFour.tsx'
 import MemoryGame from './challenges/memory-game/MemoryGame.tsx'
 import SubstringLength from './challenges/substring-length/SubstringLength.tsx'
 import Thesaurus from './challenges/thesaurus/Thesaurus.tsx'
@@ -56,6 +56,10 @@ const router = createBrowserRouter([
                 element: <ClickDots />,
             },
             {
+                path: '/connect-four',
+                element: <ConnectFour />,
+            },
+            {
                 path: '/memory-game',
                 element: <MemoryGame />,
             },
@@ -80,7 +84,5 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>,
+    <RouterProvider router={router} />
 )

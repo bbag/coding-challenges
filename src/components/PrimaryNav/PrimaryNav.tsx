@@ -10,6 +10,7 @@ export default function TopNav() {
         { name: 'Breaking Bad',     path: '/breaking-bad',     isDone: false },
         { name: 'Checkout Queue',   path: '/checkout-queue',   isDone: false },
         { name: 'Click Dots',       path: '/click-dots',       isDone: false },
+        { name: 'Connect Four',     path: '/connect-four',     isDone: false },
         { name: 'Memory Game',      path: '/memory-game',      isDone: false },
         { name: 'Substring Length', path: '/substring-length', isDone: true  },
         { name: 'Thesaurus',        path: '/thesaurus',        isDone: false },
