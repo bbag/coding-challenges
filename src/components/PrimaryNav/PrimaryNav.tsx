@@ -8,7 +8,7 @@ export default function TopNav() {
         { name: 'Autocomplete',     path: '/autocomplete',     isDone: false },
         { name: 'Basic Fetch',      path: '/basic-fetch',      isDone: true  },
         { name: 'Breaking Bad',     path: '/breaking-bad',     isDone: false },
-        { name: 'Checkout Queue',   path: '/checkout-queue',   isDone: false },
+        { name: 'Checkout Queue',   path: '/checkout-queue',   isDone: true  },
         { name: 'Click Dots',       path: '/click-dots',       isDone: false },
         { name: 'Connect Four',     path: '/connect-four',     isDone: false },
         { name: 'Memory Game',      path: '/memory-game',      isDone: false },

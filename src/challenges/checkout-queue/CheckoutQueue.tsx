@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react'
 type Lanes = number[][]
 
 export default function CheckoutQueue() {
-    const [inputVal, setInputVal] = useState(0)
+    const [inputVal, setInputVal] = useState(1)
     const [lanes, setLanes] = useState<Lanes>([
         [6, 5, 12],
-        [4, 17, 3],
+        [4, 17, 9],
         [15],
         [9, 5, 10, 14],
         [12, 8]
@@ -31,20 +31,19 @@ export default function CheckoutQueue() {
         newLanes[smallestLane].push(inputVal)
 
         setLanes(newLanes)
-        setInputVal(0)
+        setInputVal(1)
     }
 
     function calcLaneTotal(laneArray: number[]) {
-        return laneArray.reduce((acc, current) => acc + current)
+        return laneArray.length > 0 ? laneArray.reduce((acc, current) => acc + current) : 0
     }
 
     useEffect(() => {
         const interval = setInterval(() => {
-            console.log('checking out...')
             const newLanes = structuredClone(lanes)
 
             // Map through each lane in `newLanes`
-            newLanes.forEach(lane => {
+            newLanes.forEach((lane, laneIndex) => {
 
                 // Check if lane.length > 0
                 if (lane.length > 0) {
@@ -57,19 +56,24 @@ export default function CheckoutQueue() {
                     }
 
                     // If it's not (i.e. the value is 1 or somehow less) then remove that item from the `lane` array
+                    else if (lane.length > 1) {
+                        lane.splice(0, 1)
+                    }
+
+                    // Otherwise, if it's the absolute last item in the array, set the lane's item count to 0
                     else {
-                        newLanes.splice(0, 1)
+                        lane[0] = 0
                     }
                 }
             })
-
+            // console.log('newLanes2:', newLanes)
             setLanes(newLanes)
-        }, 1000)
+        }, 500)
 
         return () => {
             clearInterval(interval)
         }
-    }, [])
+    }, [lanes])
 
     return (
         <>
@@ -92,11 +96,13 @@ export default function CheckoutQueue() {
             </ol>
             <hr />
             {/* Add solution here */}
-            <input type="number" value={inputVal} onChange={(e) => {setInputVal(parseInt(e.target.value))}} />
+            <h3>Add new item(s) to shortest lane:</h3>
+            <input type="number" value={inputVal} onChange={(e) => {setInputVal(parseInt(e.target.value))}} min="1" max="100" />
             <button onClick={addNewItemsToCheckout}>Checkout</button>
             <pre>
                 {lanes.map((lane, laneIndex) => (
                     <span key={laneIndex}>
+                        Lane {laneIndex + 1}: 
                         [{lane.map((item, itemIndex) => (
                             <span key={itemIndex}>
                                 {item}{itemIndex < lane.length - 1 && <>, </>}
